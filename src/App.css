@@ -1,0 +1,104 @@
+
+.curve-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  background: transparent;
+}
+
+.form-content {
+  position: relative;
+  z-index: 1; /* text always above svg */
+}
+
+
+
+
+
+
+.shadow-glow {
+  padding: 15px;
+border-radius: 25px;
+  
+  animation: shadowPulse 2s infinite ease-in-out;
+}
+
+@keyframes shadowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px 2px rgba(59,130,246,0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px 6px rgba(59,130,246,1);
+  }
+}
+
+
+.webhover{
+  
+
+}
+
+
+ .stroke-text {
+    -webkit-text-stroke: 1px black;
+
+    color: transparent;              
+  }
+
+
+
+
+
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+
+
+
+/* support */
+.semi-circle {
+  width: 300px;
+  height: 150px;
+  border: 3px solid #ff9800;   /* semicircle border */
+  border-bottom: none;          /* remove bottom */
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+
+/* dot ul */
+.dot {
+  color: red;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 4s infinite;
+}
+
