@@ -240,7 +240,7 @@ import Websiteandapp from './Websiteandapp';
 import Demowebsite from './Demowebsite';
 import Ourproduct from './ourproduct';
 import Support from './support';
-import axios from 'axios'
+
 const Home = () => { 
 
 
@@ -403,7 +403,7 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
       <Websiteandapp />
       <Demowebsite />
       <Ourproduct />
-      <Support/>
+     <Support/>
     </div>
   )
 }
