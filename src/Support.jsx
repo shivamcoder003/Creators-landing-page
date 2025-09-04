@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 
-const support = () => {
+const Support = () => {
   return (
     <div>
        <div className='bg-gradient-to-r from-blue-500 via-white to-green-500'>
@@ -96,4 +96,4 @@ const support = () => {
   )
 }
 
-export default support
+export default Support
