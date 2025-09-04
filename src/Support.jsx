@@ -19,7 +19,7 @@ const support = () => {
    </motion.span>
 
 
-<p className="mt-5 text-lg md:text-xl text-gray-800 border-l-4 border-orange-400 pl-4 italic ">
+<p classnameName="mt-5 text-lg md:text-xl text-gray-800 border-l-4 border-orange-400 pl-4 italic ">
   We bring together innovation and reliability, connecting digital boards, apps, 
   and websites into one powerful ecosystem.
 </p>
@@ -45,14 +45,14 @@ const support = () => {
       <h1 className="md:text-3xl text-2xl font-bold text-white text-center">
        Let’s build the future of the digital world together.
       </h1>
-<ul class="space-y-3 text-lg">
-  <li><span class="dot animate-blink ">•</span> One platform, endless possibilities</li>
-  <li><span class="dot animate-blink">•</span> Smart digital boards with instant updates</li>
-  <li><span class="dot animate-blink">•</span> Affordable, reliable, future-ready</li>
-  <li><span class="dot animate-blink">•</span> 24/7 Support – Dedicated support team to help whenever you need.</li>
-    <li><span class="dot animate-blink">•</span> Scalable Technology – Works for individuals, startups, schools.</li>
+<ul className="space-y-3 text-lg">
+  <li><span className="dot animate-blink ">•</span> One platform, endless possibilities</li>
+  <li><span className="dot animate-blink">•</span> Smart digital boards with instant updates</li>
+  <li><span className="dot animate-blink">•</span> Affordable, reliable, future-ready</li>
+  <li><span className="dot animate-blink">•</span> 24/7 Support – Dedicated support team to help whenever you need.</li>
+    <li><span className="dot animate-blink">•</span> Scalable Technology – Works for individuals, startups, schools.</li>
 
-<li><span class="dot animate-blink">•</span> Secure & Reliable – Your data and content remain safe with us.</li>
+<li><span className="dot animate-blink">•</span> Secure & Reliable – Your data and content remain safe with us.</li>
 </ul>
 
 
@@ -69,7 +69,7 @@ const support = () => {
   <div className="container mx-auto flex flex-col items-center">
     {/* Logo */}
     <img 
-      src="/creators-mind-logo.png" 
+      src="./creatorsmindlogo.png" 
       alt="Creatorsmind Logo" 
       className="h-12 mb-4" 
     />

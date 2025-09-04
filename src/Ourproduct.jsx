@@ -99,7 +99,7 @@ const handleClick3 = () => {
       <AnimatePresence >
         {!showText && (
           <motion.img
-            src="/cameraimagee.png"
+            src="./cameraimagee.png"
             alt=""
             className="w-full h-full object-cover  "
             initial={{ scale: 0.8, opacity: 0 }}
@@ -170,7 +170,7 @@ const handleClick3 = () => {
       <AnimatePresence>
         {!showText1 && (
           <motion.img
-            src="/brandcamera.png"
+            src="./brandcamera.png"
             alt=""
             className="w-full h-full  object-cover "
             initial={{ scale: 0.8, opacity: 0 }}
@@ -234,7 +234,7 @@ const handleClick3 = () => {
       <AnimatePresence>
         {!showText2 && (
           <motion.img
-            src="/headphonee.png"
+            src="./headphonee.png"
             alt=""
             className="w-full h-full object-cover  "
             initial={{ scale: 0.8, opacity: 0 }}
@@ -301,7 +301,7 @@ const handleClick3 = () => {
       <AnimatePresence>
         {!showText3 && (
           <motion.img
-            src="/digitall.png"
+            src="./digitall.png"
             alt=""
             className="  "
             initial={{ scale: 0.8, opacity: 0 }}

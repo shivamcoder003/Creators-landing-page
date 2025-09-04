@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import "./App.css"; 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Creators-landing-page">
 <Navbar></Navbar>
 
 <Routes>
