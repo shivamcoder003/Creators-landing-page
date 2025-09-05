@@ -28,7 +28,7 @@ const Websiteandapp = () => {
 
 
 <div className='flex md:flex-row flex-col md:justify-center  md:items items-center gap-10'>
-<div className='w-96 h-70 mt-10 bg-slate-400 border-2 flex items-center flex-col  border-orange-400 bg-gradient-to-tl from-blue-500 via-slate-300 to-orange-200 hover:scale-105 cursor-pointer rounded-lg shadow-lg    transition-all duration-300  animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 hover:ring-offset-1'>
+<div className='w-80 h-70 mt-10 bg-slate-400 border-2 flex items-center flex-col  border-orange-400 bg-gradient-to-tl from-blue-500 via-slate-300 to-orange-200 hover:scale-105 cursor-pointer rounded-lg shadow-lg    transition-all duration-300  animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 hover:ring-offset-1'>
 '
 
     <img src={rocket} alt=""  style={{width:"60px" ,background:"transparent "}}  className='mix-blend-multiply mt-4'/>
@@ -44,11 +44,11 @@ const Websiteandapp = () => {
 
 
 
-<div className='w-96 h-64 mt-10 bg-slate-400 border-2 flex items-center flex-col  border-orange-400 bg-gradient-to-tl from-blue-500 via-slate-300 to-orange-200 hover:scale-105 cursor-pointer rounded-lg shadow-lg    transition-all duration-300  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 hover:ring-offset-1'>
+<div className='w-80 h-auto mt-10 bg-slate-400 border-2 flex items-center flex-col  border-orange-400 bg-gradient-to-tl from-blue-500 via-slate-300 to-orange-200 hover:scale-105 cursor-pointer rounded-lg shadow-lg    transition-all duration-300  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 hover:ring-offset-1'>
 
     <img src={growth} alt=""  style={{width:"60px" ,background:"transparent "}}  className='mix-blend-multiply mt-4'/>
 
-    <p className='mt-3 text-2xl font-bold text-white'>Conversion-Focused</p>
+    <p className='mt-3 text-2xl font-bold text-white text-center'>Conversion-Focused</p>
     <p className='mt-2 text-xl p-2 text-white text-center'>Well-structured layouts and persuasive call-to-actions that convert visitors into loyal customers</p>
 
 
@@ -62,13 +62,13 @@ const Websiteandapp = () => {
 
 
 
-<div className='w-96 h-70 mt-10 bg-slate-400 border-2 flex items-center flex-col  border-orange-400 bg-gradient-to-tl from-blue-500 via-slate-300 to-orange-200 hover:scale-105 cursor-pointer rounded-lg shadow-lg    transition-all duration-300  animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 hover:ring-offset-1'>
+<div className='w-80 h-50  mt-10 bg-slate-400 border-2 flex items-center flex-col  border-orange-400 bg-gradient-to-tl from-blue-500 via-slate-300 to-orange-200 hover:scale-105 cursor-pointer rounded-lg shadow-lg    transition-all duration-300  animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 hover:ring-offset-1'>
 '
 
     <img src={datasafety} alt=""  style={{width:"60px" ,background:"transparent "}}  className='mix-blend-multiply mt-2'/>
 
-    <p className='mt-2 text-2xl font-bold text-white'>Maintenance & Security</p>
-    <p className='mt-1 text-xl p-2  text-white text-center'>Ensure your site stays secure and up-to-date with continuous monitoring, regular backups, software updates, and round-the-clock technical support.</p>
+    <p className='mt-2 text-2xl font-bold text-white text-center'>Maintenance & Security</p>
+    <p className='mt-1 text-lg p-2  text-white text-center'>Ensure your site stays secure and up-to-date with continuous monitoring, regular backups, software updates, and round-the-clock technical support.</p>
 
 
 

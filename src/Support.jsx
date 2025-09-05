@@ -15,7 +15,7 @@ const Support = () => {
   
   
   
-  className='border-4   border-orange-500 rounded-full border-t-0 border-r-0 border-l-0 p-4 mt-5 text-3xl font-bold text-center'>What Makes Us Different.
+  className='border-4   border-orange-500 rounded-full border-t-0 border-r-0 border-l-0 p-4 mt-5 text-2xl md:text-3xl font-bold text-center'>What Makes Us Different.
    </motion.span>
 
 

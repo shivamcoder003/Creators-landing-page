@@ -244,6 +244,9 @@ import Support from './support';
 const Home = () => { 
 
 
+  const [message, setMessage] = useState(""); 
+  const [messageColor, setMessageColor] = useState("green")
+
 
   const [formData, setFormData] = useState({
     name: "",
@@ -281,7 +284,12 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
       });
 
       // Since we're using no-cors mode, we can't read the response
-      alert("✅ Data submitted successfully!");
+       alert("✅ Thanks for your interest! We’ll contact you soon.");
+  //     const messageBox = document.getElementById("responseMessage");
+  // if (messageBox) {
+  //   messageBox.innerText = "✅ Thanks for your interest! We’ll contact you soon.";
+  //   messageBox.style.color = "green";
+  // }
       setFormData({ name: "", email: "", number: "", role: "" }); // Reset form
     } catch (error) {
       console.error("Error:", error);
@@ -353,12 +361,15 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
                 <div className="flex items-center border rounded mt-2">
                   <img src={phone} alt="phone" className="w-9 h-9 rounded-full m-2" />
                   <input
-                    type="number"
+                    type="tel"
                     name="number"
                     value={formData.number}
                     onChange={handleChange}
                     placeholder="Enter your Number"
                     className="w-full outline-none p-3 text-xl text-clip text-blue-400 bg-clip-text"
+                    pattern="[0-9]{10}"
+               minLength={10}
+                maxLength={10}
                     required
                   />
                 </div>
@@ -394,7 +405,10 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
                 <p className="mt-4 text-black text-xl text-center">
                   📜 By joining, you accept our Terms & Privacy Policy.
                 </p>
+                
               </form>
+
+   
             </div>
           </div>
         </div>
