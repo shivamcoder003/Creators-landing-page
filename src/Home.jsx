@@ -230,7 +230,7 @@
 
 
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./App.css"; 
 import profile from "./assets/profile.gif"
 import email from "./assets/email.gif"
@@ -260,6 +260,26 @@ const Home = () => {
     setFormData({ ...formData, [name]:value });
   };
 
+
+
+
+
+
+useEffect(() => {
+  if (message) {
+
+    const timer = setTimeout(() => {
+     
+      setTimeout(() => setMessage(""), 500); // 0.5s baad remove from DOM
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }
+}, [message]);
+
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -284,16 +304,24 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
       });
 
       // Since we're using no-cors mode, we can't read the response
-       alert("✅ Thanks for your interest! We’ll contact you soon.");
-  //     const messageBox = document.getElementById("responseMessage");
-  // if (messageBox) {
-  //   messageBox.innerText = "✅ Thanks for your interest! We’ll contact you soon.";
-  //   messageBox.style.color = "green";
-  // }
-      setFormData({ name: "", email: "", number: "", role: "" }); // Reset form
+    //   alert("✅ Thanks for your interest! We’ll contact you soon.");
+
+
+
+  setMessage("✅ Thanks for your interest! We’ll contact you soon.");
+    setMessageColor("green");
+
+
+
+
+
+
+setFormData({ name: "", email: "", number: "", role: "" }); // Reset form
     } catch (error) {
       console.error("Error:", error);
-      alert("❌ Something went wrong!");
+      // alert("❌ Something went wrong!");
+          setMessage("❌ Something went wronggg!");
+    setMessageColor("red");
     }
   };
 
@@ -406,6 +434,18 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
                   📜 By joining, you accept our Terms & Privacy Policy.
                 </p>
                 
+
+
+{message && (
+  <p id="setMessage" style={{ color: messageColor, marginTop: "10px",fontSize:"20px" }}>
+    {message}
+  </p>
+)}
+
+
+
+
+
               </form>
 
    
