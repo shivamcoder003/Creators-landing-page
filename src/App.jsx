@@ -1,11 +1,13 @@
 import React from 'react'
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+
 import Home from './Home'
 import Navbar from './Navbar'
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import "./App.css"; 
 const App = () => {
   return (
-    <BrowserRouter basename="/Creators-landing-page">
+    // <HashRouter basename="/Creators-landing-page">
+    <HashRouter>
 <Navbar></Navbar>
 
 <Routes>
@@ -17,7 +19,7 @@ const App = () => {
     
     
     
-    </BrowserRouter>
+    </HashRouter>
     
   )
 }

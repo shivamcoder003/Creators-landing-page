@@ -250,12 +250,25 @@ const Demowebsite = () => {
     <motion.button
       whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px rgba(0,255,150,0.8)" }}
       whileTap={{ scale: 0.95 }}
+        onClick={() => {
+    window.location.hash = '#/';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }}
       className="mt-6 ml-5 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-sm md:text-2xl shadow-glow"
     >
       And this is just a glimpse – many more features await you.
     </motion.button>
   </Link>
 </motion.div>
+
+
+
+
+
+
+
+
+
 
 
 
