@@ -34,34 +34,57 @@ const Demowebsite = () => {
 
 <div className=' '>
 
- <div className='w-5/6 md:h-auto lg:h-96 h-auto p-4 bg-slate-800  m-auto mt-5 aspect-video flex md:flex-col lg:flex-row flex-col rounded-xl border-2 shadow-lg    transition-all duration-500  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group'>
-<div className='rounded-3xl h-ful md:w-2/3 lg:w-min-1/2 md:ml-24 lg:ml-7 '>
-<video src={homevideo} className='  md:mt-4 lg:mt-14  group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl
- ' autoPlay disablePictureInPicture loop muted  type="video/mp4" ></video>
-</div>
+<div className="w-5/6 bg-slate-800 p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
 
+  {/* Video Section */}
+  <div className="w-full lg:w-1/2 flex justify-center items-center">
+    <video
+      src={homevideo}
+      className="w-full h-auto mt-4 lg:mt-0 group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl"
+      autoPlay
+      disablePictureInPicture
+      loop
+      muted
+      type="video/mp4"
+    />
+  </div>
 
-{/* <div className='md:ml-14 md:w-1/2  flex md:flex-col flex-col gap-5 md:mt-14 mt-5 md:items-start items-center'>  */}
-<div className='md:ml-14  mx-auto flex md:flex-col flex-col gap-5 mt-5 md:mt-14 md:items-start items-center'>
+  {/* Content Section */}
+  <div className="w-full lg:w-1/2 flex flex-col gap-5 mt-6 lg:mt-0 lg:ml-10 items-center lg:items-start text-center lg:text-left justify-center">
+    
+    {/* Icon */}
+    <img
+      src="./increase.png"
+      alt="increase"
+      className="w-20 bg-pink-900 p-3 rounded-xl"
+    />
 
-<img src="./increase.png" alt="" className='w-20 bg-pink-900 p-3 rounded-xl'/>
+    {/* Highlighted Line */}
+    <span className="text-white text-sm md:text-lg p-2 border-2 rounded-3xl border-blue-500 group-hover:border-yellow-500 transition-colors duration-300">
+      • Your website. Your tools. Your tracking — all in one place.
+    </span>
 
-
-<span className='text-white text-sm  md:text-lg p-2 border-2 rounded-3xl border-blue-500 group-hover:border-yellow-500 text-center transition-colors duration-300'>• Your website. Your tools. Your tracking — all in one place.</span>
-
-<motion.p   initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0,          textShadow: "0px 0px 20px rgba(255,255,255,0.8)"}}
+    {/* Description */}
+    <motion.p
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        textShadow: "0px 0px 20px rgba(255,255,255,0.8)"
+      }}
       transition={{ duration: 1 }}
       viewport={{ once: false, amount: 0.1 }}
-      className="text-white text-lg ">Easily track studnet payments anytime and access a wide range of customizable tools  — all from your dashboard</motion.p>
+      className="text-white text-base md:text-lg leading-relaxed"
+    >
+      Easily track student payments anytime and access a wide range of customizable tools — all from your dashboard.
+    </motion.p>
 
-
+  </div>
 </div>
 
 
 
 
-</div> 
 
 
 
@@ -71,7 +94,10 @@ const Demowebsite = () => {
 
 
 
-<div className=' w-5/6 md:h-auto lg:h-96 h-auto bg-slate-800 p-4 m-auto mt-5 aspect-video flex  md:flex-col lg:flex-row flex-col rounded-xl border-2 shadow-2xl    transition-all duration-500  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group'>
+
+
+
+{/* <div className=' w-5/6 md:h-auto lg:h-96 h-auto bg-slate-800 p-4 m-auto mt-5 aspect-video flex  md:flex-col lg:flex-row flex-col rounded-xl border-2 shadow-2xl    transition-all duration-500  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group'>
 <div className='rounded-3xl  h-ful md:w-2/3 lg:w-1/2 md:ml-24 lg:ml-7 '>
 <video src={Dashboard} className='   md:mt-4 lg:mt-14   group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl
  ' autoPlay disablePictureInPicture loop muted  type="video/mp4" ></video>
@@ -96,38 +122,114 @@ const Demowebsite = () => {
 
 
 
-</div>
+</div> */}
 
 
 
+<div className="w-5/6 bg-slate-800 p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
+  
+  {/* Video Section */}
+  <div className="w-full lg:w-1/2 flex justify-center items-center">
+    <video
+      src={Dashboard}
+      className="w-full h-auto mt-4 lg:mt-0 group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl"
+      autoPlay
+      disablePictureInPicture
+      loop
+      muted
+      type="video/mp4"
+    />
+  </div>
 
+  {/* Content Section */}
+  <div className="w-full lg:w-1/2 flex flex-col gap-5 mt-6 lg:mt-0 lg:ml-10 items-center lg:items-start text-center lg:text-left justify-center">
+    
+    {/* Icon */}
+    <img
+      src="./qualityy.png"
+      alt="quality"
+      className="w-20 bg-yellow-200 p-3 rounded-xl"
+    />
 
-<div className='  w-5/6 md:h-auto lg:h-96 h-auto p-4 bg-slate-800  m-auto mt-5 aspect-video flex md:flex-col lg:flex-row flex-col rounded-xl border-2 shadow-2xl    transition-all duration-500  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group'>
-<div className='rounded-3xl   h-ful md:w-2/3 lg:w-1/2 md:ml-24 lg:ml-7 '>
-<video src={aiquestion} className='  md:mt-4 lg:mt-14   group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl
- ' autoPlay disablePictureInPicture loop muted  type="video/mp4" ></video>
-</div>
+    {/* Highlighted Point */}
+    <span className="text-white text-sm md:text-lg p-2 border-2 rounded-3xl border-blue-500 group-hover:border-yellow-500 transition-colors duration-300">
+      • Real-time insights on your dashboard.
+    </span>
 
-
-<div className='md:ml-14 flex md:flex-col flex-col gap-5 mt-5 md:mt-14 md:items-start items-center'> 
-<img src="./communicationss.png" alt="" className='w-20 bg-yellow-200 p-3 rounded-xl'/>
-
-
-<span className='text-white text-xl md:text-lg p-2 border-2 rounded-3xl border-blue-500 group-hover:border-yellow-500 text-center transition-colors duration-300'>• Ai powered question</span>
-
-<motion.p   initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0,          textShadow: "0px 0px 20px rgba(255,255,255,0.8)"}}
+    {/* Description */}
+    <motion.p
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        textShadow: "0px 0px 20px rgba(255,255,255,0.8)"
+      }}
       transition={{ duration: 1 }}
       viewport={{ once: false, amount: 0.1 }}
-      className="text-white text-lg">Generate smart AI-powered questions instantly on any topic and in any subject.</motion.p>
+      className="text-white text-base md:text-lg leading-relaxed"
+    >
+      Easily monitor sales, customer activity, and earnings across different sources.
+    </motion.p>
 
-
+  </div>
 </div>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+<div className="w-[95%] sm:w-5/6 bg-slate-800 p-4 sm:p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
+  
+  {/* Video Section */}
+  <div className="w-full lg:w-1/2 flex justify-center items-center">
+    <video
+      src={aiquestion}
+      className="w-full max-w-md sm:max-w-lg lg:max-w-full h-auto mt-4 lg:mt-0 group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl"
+      autoPlay
+      disablePictureInPicture
+      loop
+      muted
+      type="video/mp4"
+    ></video>
+  </div>
+
+  {/* Content Section */}
+  <div className="flex flex-col gap-5 mt-5 sm:mt-10 lg:mt-14 md:ml-8 lg:ml-14 md:items-start items-center text-center md:text-left">
+    <img
+      src="./communicationss.png"
+      alt="communication"
+      className="w-16 sm:w-20 bg-yellow-200 p-3 rounded-xl"
+    />
+
+    <span className="text-white text-base sm:text-lg lg:text-xl px-4 py-2 border-2 rounded-3xl border-blue-500 group-hover:border-yellow-500 text-center transition-colors duration-300">
+      • Ai powered question
+    </span>
+
+    <motion.p
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        textShadow: "0px 0px 20px rgba(255,255,255,0.8)",
+      }}
+      transition={{ duration: 1 }}
+      viewport={{ once: false, amount: 0.1 }}
+      className="text-white text-sm sm:text-base lg:text-lg leading-relaxed max-w-lg"
+    >
+      Generate smart AI-powered questions instantly on any topic and in any subject.
+    </motion.p>
+  </div>
 </div>
+
 
 {/* <Link to="/"  onClick={() => window.location.href='/'}><button className="mt-6 ml-96 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-sm md:text-2xl hover:scale-105 shadow-glow">
       And this is just a glimpse – many more features await you.

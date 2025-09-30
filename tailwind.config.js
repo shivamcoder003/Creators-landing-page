@@ -22,7 +22,7 @@ export default {
     },
 
       marquee: {
-          '0%': { transform: 'translateX(0%)' },
+          '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
         },
 
@@ -30,10 +30,11 @@ export default {
       animation: {
         'gradient-move': 'gradient-move 3s linear infinite',
             'fade-in': 'fade-in 10.5s ease-out forwards',
-                    marquee: 'marquee 5s linear infinite',
+                    marquee: 'marquee 15s linear infinite',
 
 
       },
+      
       backgroundSize: {
         '200': '200% 200%',
       },

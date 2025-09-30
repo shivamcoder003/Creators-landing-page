@@ -20,10 +20,10 @@ const circleimage=[
   {image:"./headphonee.png",title:"Mic" },
    {image:"./digital.png",title:"Digital Board" },
   {image:"./ops.png",title:"Ops" },
-  {image:"./cable.png",title:"Cable" },
+  {image:"./dongle.png",title:"Dongle" },
   {image:"./ligticon.png",title:"Light" },
   {image:"./stand.png",title:"Stand" },
-  {image:"./cardreader.png",title:"Cardreader" }
+  {image:"./newmic.png",title:"PencilAi Mic" }
 
 
 ]
@@ -62,6 +62,8 @@ const handleClick3 = () => {
 
 
 
+
+
 <motion.p
   initial={{ filter: "blur(100px)", opacity: 0 }}
   whileInView={{ filter: "blur(0px)", opacity: 1 }}
@@ -86,7 +88,7 @@ const handleClick3 = () => {
             
         </div>
 
-<div className='flex pl:18 md:pl-20  gap-6  overflow-x-auto hide-scrollbar p-4'>
+<div className='flex pl:18 md:pl-18 lg:w-full  md:justify-center gap-6  overflow-x-auto hide-scrollbar p-4'>
 
 
       <div
@@ -141,7 +143,7 @@ const handleClick3 = () => {
     <p className='mt-2 text-lg'>AI-Powered Auto-Tracking</p>
     <p className='mt-2 text-lg'>Smooth Pan-Tilt-Zoom (PTZ) Control</p>
     <p className='mt-2 text-lg'>Crystal Clear Audio Integration</p>   
-    <p className='mt-2 text-lg'>Multiple Connectivity Options</p>
+    {/* <p className='mt-2 text-lg'>Multiple Connectivity Options</p> */}
 
 
             </div>
@@ -338,14 +340,14 @@ const handleClick3 = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-xl ml-4 md:text-3xl font-bold font-serif text-transparent stroke-text bg-gradient-to-r from-yellow-400 to-green-400 bg-clip-text">
+            <p className="text-xl ml-4 md:text-3xl font-bold font-serif text-transparent stroke-text bg-gradient-to-r from-yellow-500 to-green-400 bg-clip-text">
              Top Highlights of PencilAi Camera!
             </p>
             <div className='text-white ml-4 gap-4 '>
     <p className='mt-2 text-lg'>4K Ultra HD Display with Multi-Touch Support (20-Point Touch)</p>
     <p className='mt-2 text-lg'>Android 14 OS with EDLA Certification for Seamless App Integration</p>
-    <p className='mt-2 text-lg'>Wireless Screen Sharing & Annotation Tools</p>
-  
+    {/* <p className='mt-2 text-lg'>Wireless Screen Sharing & Annotation Tools</p>
+   */}
 
 
             </div>
@@ -378,14 +380,25 @@ we provide such more product of different brand
   <div className="inline-block animate-marquee group-hover:[animation-play-state:paused] text-xl font-extrabold tracking-widest uppercase font-goldman">
     
     <span className="mx-10 text-red-500 animate-pulse">Maxhub</span>
-    <span className="mx-6 text-red-400 inline-block text-5xl transform transition-transform duration-500 group-hover:rotate-180">→</span>
+    <span className="mx-6 text-red-400 inline-block text-5xl lg:text-6xl transform transition-transform duration-500 group-hover:rotate-180">→</span>
     
     <span className="mx-10 text-yellow-400 animate-pulse">⚡ Evota</span>
-    <span className="mx-6 text-red-400 inline-block transform  text-5xl transition-transform duration-500 group-hover:rotate-180">→</span>
+    <span className="mx-6 text-red-400 inline-block transform lg:text-6xl text-5xl transition-transform duration-500 group-hover:rotate-180">→</span>
     
     <span className="mx-10 text-green-400 ">Pencil Ai</span>
-    <span className="mx-6 text-red-400 inline-block  text-5xl transform transition-transform duration-500 group-hover:rotate-180">→</span>
+    <span className="mx-6 text-red-400 inline-block lg:text-6xl  text-5xl transform transition-transform duration-500 group-hover:rotate-180">→</span>
     
+
+  <span className="mx-10 text-green-400 ">LG</span>
+    <span className="mx-6 text-red-400 inline-block lg:text-6xl text-5xl transform transition-transform duration-500 group-hover:rotate-180">→</span>
+
+  {/* <span className="mx-10 text-green-400 ">PencilAi</span>
+    <span className="mx-6 text-red-400 inline-block lg:text-6xl text-5xl transform transition-transform duration-500 group-hover:rotate-180">→</span> */}
+
+
+  <span className="mx-10 text-green-400 ">Senses</span>
+    <span className="mx-6 text-red-400 inline-block lg:text-6xl text-5xl transform transition-transform duration-500 group-hover:rotate-180">→</span>
+
   </div>
 </div>
 
@@ -409,60 +422,47 @@ we provide such more product of different brand
 
 
 
+<div className="mt-10 overflow-hidden relative overflow-x-auto hide-scrollbar  w-full">
+  <div className="flex gap-8 animate-marquee group-hover:pause-marquee">
+    {circleimage.concat(circleimage).map((item, index) => (
+      <div
+        key={index}
+        className="flex flex-col items-center flex-shrink-0 w-24 sm:w-28 md:w-32 lg:w-36"
+      >
+        <div
+          className="w-full h-24 sm:h-28 md:h-32 lg:h-36 border-2 border-yellow-200 cursor-pointer flex items-center justify-center relative overflow-hidden rounded-full"
+          onClick={() =>
+            setactiveindex(activeindex === index ? null : index)
+          }
+        >
+          <AnimatePresence>
+            {activeindex !== index && (
+              <motion.img
+                src={item.image}
+                alt=""
+                className="w-full h-full object-contain rounded-full"
+                initial={{ rotate: 0, scale: 0.8, opacity: 0 }}
+                animate={{ rotate: 360, scale: 1, opacity: 1 }}
+                exit={{ rotate: 360, scale: 0.5, opacity: 0 }}
+                transition={{ duration: 0.8 }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 3,
+                  boxShadow: "0px 0px 20px rgba(255,255,0,0.8)",
+                }}
+              />
+            )}
+          </AnimatePresence>
+        </div>
 
-<div className='mt-10  flex gap-5 pl-5  pb-5  overflow-x-auto hide-scrollbar group'>
-
-
-  
-{circleimage.map((item ,index)=>(
-<div
-    key={index}
-    className="flex flex-col   items-center animate-marquee group-hover:[animation-play-state:paused] ml-4 ">
-<div
-
-      className="w-36 flex-shrink-0 h-36 border-2 border-yellow-200 ml-4 cursor-pointer flex items-center justify-center relative overflow-hidden rounded-full"
-      onClick={() => setactiveindex(activeindex === index ? null : index)}
-    >
-      {/* Image */}
-      <AnimatePresence>
-        {activeindex !== index && (
-          <motion.img
-            src={item.image}
-            alt=""
-            className="w-full h-full object-contain rounded-full"
-            initial={{ rotate: 0, scale: 0.8, opacity: 0 }}
-            animate={{ rotate: 360, scale: 1, opacity: 1 }}
-            exit={{ rotate: 360, scale: 0.5, opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            whileHover={{ scale: 1.1, rotate: 3, boxShadow: "0px 0px 20px rgba(255,255,0,0.8)" }}
-          />
-        )}
-      </AnimatePresence>
-
-    </div>
-
-
- <p className="mt-2 text-2xl font-medium text-gray-800">
-      {item.title || `Item ${index}`}
-    </p>
-
-
-
- </div>
-))}
-
-
-
-
-
-
-
-
-
-
-
-
+        <p className="mt-2 text-lg sm:text-xl md:text-2xl font-medium text-gray-800 text-center">
+          {item.title || `Item ${index + 1}`}
+        </p>
+      </div>
+    ))}
+  </div>
 </div>
+
 
 
 
