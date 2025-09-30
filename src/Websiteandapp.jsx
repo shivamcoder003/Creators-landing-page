@@ -105,14 +105,25 @@ onClick={() => window.scrollTo(0,0)}
 {/* SABSE SIMPLE - DIRECT BUTTON */}
 <button 
   onClick={() => {
-    window.location.hash = '#/';
+    // Automatically detect environment
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    
+    if (isGitHubPages) {
+      // GitHub Pages
+      window.history.pushState(null, '', '/Creators-landing-page/#/');
+    } else {
+      // Localhost
+      window.history.pushState(null, '', '/#/');
+    }
+    
+    // Force React Router to update
+    window.dispatchEvent(new PopStateEvent('popstate'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }}
   className="m-auto mt-10 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-2xl md:text-4xl hover:scale-105 shadow-glow"
 >
   Be with us for your future success.
 </button>
-
 
 
 <p className='text-2xl mt-5 text-white'>Get your free demo today !</p>

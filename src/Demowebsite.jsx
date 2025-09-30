@@ -250,9 +250,22 @@ const Demowebsite = () => {
     <motion.button
       whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px rgba(0,255,150,0.8)" }}
       whileTap={{ scale: 0.95 }}
-        onClick={() => {
-    window.location.hash = '#/';
+      onClick={() => {
+    // Automatically detect environment
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    
+    if (isGitHubPages) {
+      // GitHub Pages
+      window.history.pushState(null, '', '/Creators-landing-page/#/');
+    } else {
+      // Localhost
+      window.history.pushState(null, '', '/#/');
+    }
+    
+    // Force React Router to update
+    window.dispatchEvent(new PopStateEvent('popstate'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
+ 
   }}
       className="mt-6 ml-5 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-sm md:text-2xl shadow-glow"
     >
@@ -261,6 +274,31 @@ const Demowebsite = () => {
   </Link>
 </motion.div>
 
+
+
+
+
+{/* <button 
+  onClick={() => {
+    // Automatically detect environment
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    
+    if (isGitHubPages) {
+      // GitHub Pages
+      window.history.pushState(null, '', '/Creators-landing-page/#/');
+    } else {
+      // Localhost
+      window.history.pushState(null, '', '/#/');
+    }
+    
+    // Force React Router to update
+    window.dispatchEvent(new PopStateEvent('popstate'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }}
+  className="m-auto mt-10 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-2xl md:text-4xl hover:scale-105 shadow-glow"
+>
+  Be with us for your future success.
+</button> */}
 
 
 
