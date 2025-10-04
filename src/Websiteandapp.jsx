@@ -105,18 +105,18 @@ onClick={() => window.scrollTo(0,0)}
 {/* SABSE SIMPLE - DIRECT BUTTON */}
 <button 
   onClick={() => {
-    // Automatically detect environment
+  
     const isGitHubPages = window.location.hostname.includes('github.io');
     
     if (isGitHubPages) {
-      // GitHub Pages
+    
       window.history.pushState(null, '', '/Creators-landing-page/#/');
     } else {
-      // Localhost
+      
       window.history.pushState(null, '', '/#/');
     }
     
-    // Force React Router to update
+    
     window.dispatchEvent(new PopStateEvent('popstate'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }}

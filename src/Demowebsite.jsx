@@ -87,16 +87,6 @@ const Demowebsite = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 {/* <div className=' w-5/6 md:h-auto lg:h-96 h-auto bg-slate-800 p-4 m-auto mt-5 aspect-video flex  md:flex-col lg:flex-row flex-col rounded-xl border-2 shadow-2xl    transition-all duration-500  animate-slide-in-left stagger-1  hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group'>
 <div className='rounded-3xl  h-ful md:w-2/3 lg:w-1/2 md:ml-24 lg:ml-7 '>
 <video src={Dashboard} className='   md:mt-4 lg:mt-14   group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl
@@ -177,17 +167,7 @@ const Demowebsite = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-<div className="w-[95%] sm:w-5/6 bg-slate-800 p-4 sm:p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
+<div className="w-5/6 sm:w-5/6 bg-slate-800 p-4 sm:p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
   
   {/* Video Section */}
   <div className="w-full lg:w-1/2 flex justify-center items-center">
@@ -246,59 +226,38 @@ const Demowebsite = () => {
   viewport={{ once: false, amount: 0.4 }}
   className='flex justify-center items-center w-full'
 >
-  <Link to="/" onClick={() => (window.location.href = "/")}>
+ 
     <motion.button
       whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px rgba(0,255,150,0.8)" }}
       whileTap={{ scale: 0.95 }}
-      onClick={() => {
-    // Automatically detect environment
+  onClick={() => {
+  
     const isGitHubPages = window.location.hostname.includes('github.io');
     
     if (isGitHubPages) {
-      // GitHub Pages
+    
       window.history.pushState(null, '', '/Creators-landing-page/#/');
     } else {
-      // Localhost
+      
       window.history.pushState(null, '', '/#/');
     }
     
-    // Force React Router to update
+    
     window.dispatchEvent(new PopStateEvent('popstate'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
- 
   }}
       className="mt-6 ml-5 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-sm md:text-2xl shadow-glow"
     >
       And this is just a glimpse – many more features await you.
     </motion.button>
-  </Link>
+
 </motion.div>
 
 
 
 
 
-{/* <button 
-  onClick={() => {
-    // Automatically detect environment
-    const isGitHubPages = window.location.hostname.includes('github.io');
-    
-    if (isGitHubPages) {
-      // GitHub Pages
-      window.history.pushState(null, '', '/Creators-landing-page/#/');
-    } else {
-      // Localhost
-      window.history.pushState(null, '', '/#/');
-    }
-    
-    // Force React Router to update
-    window.dispatchEvent(new PopStateEvent('popstate'));
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }}
-  className="m-auto mt-10 py-2 bg-gradient-to-r from-blue-400 to-green-400 text-white font-bold rounded text-2xl md:text-4xl hover:scale-105 shadow-glow"
->
-  Be with us for your future success.
-</button> */}
+
 
 
 
