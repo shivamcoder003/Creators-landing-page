@@ -88,7 +88,7 @@ const handleClick3 = () => {
             
         </div>
 
-<div className='flex pl:18 md:pl-18 lg:w-full  md:justify-center gap-6  overflow-x-auto hide-scrollbar p-4'>
+<div className='flex pl:18 md:pl-18 lg:w-full   gap-6  overflow-x-auto hide-scrollbar p-4'>
 
 
       <div

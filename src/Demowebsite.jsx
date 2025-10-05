@@ -167,13 +167,13 @@ const Demowebsite = () => {
 
 
 
-<div className="w-5/6 sm:w-5/6 bg-slate-800 p-4 sm:p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
+<div className="w-5/6 bg-slate-800 p-6 m-auto mt-5 flex flex-col lg:flex-row rounded-xl border-2 shadow-2xl transition-all duration-500 animate-slide-in-left stagger-1 hover:drop-shadow-[0_0_25px_orange] hover:ring-4 hover:ring-orange-300 group">
   
   {/* Video Section */}
   <div className="w-full lg:w-1/2 flex justify-center items-center">
     <video
       src={aiquestion}
-      className="w-full max-w-md sm:max-w-lg lg:max-w-full h-auto mt-4 lg:mt-0 group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl"
+      className="w-full h-auto mt-4 lg:mt-0 group-hover:scale-105 border-2 transition-transform duration-400 group-hover:border-yellow-400 rounded-xl"
       autoPlay
       disablePictureInPicture
       loop
@@ -183,7 +183,7 @@ const Demowebsite = () => {
   </div>
 
   {/* Content Section */}
-  <div className="flex flex-col gap-5 mt-5 sm:mt-10 lg:mt-14 md:ml-8 lg:ml-14 md:items-start items-center text-center md:text-left">
+  <div className="w-full lg:w-1/2 flex flex-col gap-5 mt-6 lg:mt-0 lg:ml-10 items-center lg:items-start text-center lg:text-left justify-center">
     <img
       src="./communicationss.png"
       alt="communication"

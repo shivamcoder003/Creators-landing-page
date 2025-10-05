@@ -290,10 +290,17 @@ useEffect(() => {
     formDataEncoded.append("number", formData.number);
     formDataEncoded.append("role", formData.role);
 
+      console.log("👉 Sending data to Google Script:", formDataEncoded.toString());
+
+
     try {
       // Using your Google Apps Script Web App URL
-const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5zymyfOPLO8FRb5ofzIiccLjWNAFsXunE3lEp8VqwLdGHd34/exec";
-      
+//const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5zymyfOPLO8FRb5ofzIiccLjWNAFsXunE3lEp8VqwLdGHd34/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbwUJcqozA237tmFHqCMNJq7Be8veTVIA-1So-Wp3lYGO59z4s2KBudJnd0AyYI2qcRA/exec";
+
+
+
+//const scriptURL = "https://script.google.com/macros/s/AKfycbxtszvm4KXH3QbNXDLJalAbIeRGin70OV19Z3YWL9RQ-ADCMQYevJSnGsywuSZwtVEIiA/exec";
       const res = await fetch(scriptURL, {
         method: "POST",
         mode: "no-cors", // Important for Google Apps Script
@@ -307,6 +314,8 @@ const scriptURL = "https://script.google.com/macros/s/AKfycbydwGaNr8oeopkp9U8L5z
     //   alert("✅ Thanks for your interest! We’ll contact you soon.");
 
 
+
+  console.log("👉 Sending data to Google Script:", formDataEncoded.toString());
 
   setMessage("✅ Thanks for your interest! We’ll contact you soon.");
     setMessageColor("green");
@@ -325,7 +334,51 @@ setFormData({ name: "", email: "", number: "", role: "" }); // Reset form
     }
   };
 
-  return (
+
+// google sheet moh maya 
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   const formDataEncoded = new URLSearchParams();
+//   formDataEncoded.append("name", formData.name);
+//   formDataEncoded.append("email", formData.email);
+//   formDataEncoded.append("number", formData.number);
+//   formDataEncoded.append("role", formData.role);
+
+//   console.log("👉 Sending to Google Script:", formDataEncoded.toString());
+
+//   try {
+//     await fetch(
+//       "https://script.google.com/macros/s/AKfycbzYEIE7etKyUmSTq060Wk06TxraAgRg9xZ8ZH2KUqa2Mj5ze-cca78cyXAAGIqd9E4/exec",
+//       {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: formDataEncoded.toString(),
+//         mode: "no-cors", // Important: prevents CORS errors
+//       }
+//     );
+
+//     // Cannot read JSON response in no-cors mode, just assume success
+//     console.log("✅ Form submitted successfully (response not readable in no-cors mode)");
+//     setMessage("✅ Thanks for your interest! We’ll contact you soon.");
+//     setMessageColor("green");
+//     setFormData({ name: "", email: "", number: "", role: "" });
+//   } catch (err) {
+//     console.error(err);
+//     setMessage("❌ Something went wrong!");
+//     setMessageColor("red");
+//   }
+// };
+
+
+
+
+
+
+
+
+return (
     <div className='min-h-screen bg-gradient-to-t from-red-400 via-pink-500 to-blue-300'>
       <h1 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text 
         bg-gradient-to-r from-pink-600 via-purple-500 to-blue-600 
