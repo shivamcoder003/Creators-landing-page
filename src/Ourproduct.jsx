@@ -7,6 +7,7 @@ const Ourproduct = () => {
       const [showText1, setShowText1] = useState(false);
       const [showText2, setShowText2] = useState(false);
  const [showText3, setShowText3] = useState(false);
+ const [showText4, setShowText4] = useState(false);
 
 const [circletext,setcircletext]=useState(false)
 
@@ -88,7 +89,7 @@ const handleClick3 = () => {
             
         </div>
 
-<div className='flex pl:18 md:pl-18 lg:w-full   gap-6  overflow-x-auto hide-scrollbar p-4'>
+<div className='flex pl:18 md:pl-18 lg:w-full  md:justify-between gap-6  overflow-x-auto hide-scrollbar p-4'>
 
 
       <div
@@ -293,8 +294,9 @@ const handleClick3 = () => {
     </div>
 
 
- <div
-      className="w-72 flex-shrink-0  h-72 mt-10 flex-col md:hover:border-orange-400 border-2 border-yellow-200 ml-4 cursor-pointer flex items-center justify-center relative overflow-hidden rounded-lg hover:scale-105 "
+
+<div
+      className="w-72 h-72 flex-shrink-0 flex-col  mt-10 md:hover:border-orange-400 border-2 border-yellow-200 ml-4 cursor-pointer flex items-center justify-center relative overflow-hidden rounded-lg hover:scale-105 "
       onClick={() => setShowText3(!showText3)}
       onMouseEnter={() => setShowText3(true)}   // Hover start → show text
       onMouseLeave={() => setShowText3(false)}  // Hover end → hide text
@@ -302,6 +304,80 @@ const handleClick3 = () => {
       {/* Image */}
       <AnimatePresence>
         {!showText3 && (
+          <motion.img
+            src="./newmic.png"
+            alt=""
+            className="w-full h-60 object-fill "
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.5, opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          />
+        )}
+      </AnimatePresence>
+
+<AnimatePresence>
+
+  {!showText3&&(
+
+<p className='mb-8 text-2xl text-black font-bold'>PencilAi Pro Mic</p>
+
+
+  )}
+</AnimatePresence>
+
+
+
+
+
+      {/* Text */}
+      <AnimatePresence>
+        {showText3 && (
+          <motion.div
+            className="absolute flex flex-col   "
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-xl ml-4 md:text-2xl font-bold font-serif text-transparent stroke-text bg-gradient-to-r from-yellow-400 to-green-400 bg-clip-text">
+             Top Highlights of PencilAi Pro Mic!
+            </p>
+            <div className='text-white ml-4 gap-2 '>
+    <p className='mt-2 text-lg'>Noise Reduction ,Onmidirectional sound reception</p>
+    <p className='mt-2 text-lg'>Plug & Play (USB Connectivity)</p>
+    <p className='mt-2 text-lg'>1 Lithium ion batteries required.(included)</p>
+    <p className='mt-2 text-lg'>Dual Channel Universal Version
+</p>   
+    {/* <p className='mt-2 text-lg'>Wide Compatibility</p> */}
+
+
+            </div>
+       
+
+
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+
+
+
+
+
+
+
+
+
+ <div
+      className="w-72 flex-shrink-0  h-72 mt-10 flex-col md:hover:border-orange-400 border-2 border-yellow-200 ml-4 cursor-pointer flex items-center justify-center relative overflow-hidden rounded-lg hover:scale-105 "
+      onClick={() => setShowText4(!showText4)}
+      onMouseEnter={() => setShowText4(true)}   // Hover start → show text
+      onMouseLeave={() => setShowText4(false)}  // Hover end → hide text
+    >
+      {/* Image */}
+      <AnimatePresence>
+        {!showText4 && (
           <motion.img
             src="./digitall.png"
             alt=""
@@ -318,7 +394,7 @@ const handleClick3 = () => {
 
 <AnimatePresence>
 
-  {!showText3&&(
+  {!showText4&&(
 
 <p className='mb-2 mt-2 text-2xl text-black font-bold'>Pencil Ai Digital Board</p>
 
@@ -332,7 +408,7 @@ const handleClick3 = () => {
 
       {/* Text */}
       <AnimatePresence>
-        {showText3 && (
+        {showText4 && (
           <motion.div
             className="absolute flex flex-col   "
             initial={{ opacity: 0, y: 20 }}
